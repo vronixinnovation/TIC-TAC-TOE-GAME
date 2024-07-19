@@ -1,0 +1,353 @@
+/* styles.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(laptop.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  body {
+    background-image: url(mobile.jpeg);
+  }
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgb(0, 0, 0);
+  backdrop-filter: blur(3px);
+  height: 590px;
+    width: 500px;
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  .container {
+    width: 90%;
+    background-color: #ffffff00;
+    padding: 10px;
+    backdrop-filter: blur(0px);
+    box-shadow: none;
+    top: -100px;
+  }
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px auto;
+  position: relative;
+    left: 18%;
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #game-board {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    position: relative;
+    left: 5%;
+  }
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #00d1ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  cursor: pointer;
+  color: #fc99ffcc;
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2em;
+  }
+}
+
+#game-status {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #ba68c8;
+}
+
+
+
+label {
+  font-size: 20px;
+  color: #00d1ff;
+}
+
+input[type="text"], select {
+  height: 30px;
+  background-color: transparent;
+  border: 2px solid #fc99ffcc;
+  color: #fc99ffcc;
+  border-radius: 30px;
+  padding-left: 11px;
+  margin: 10px 0;
+}
+
+input[type="button"] {
+  height: 35px;
+  width: 85px;
+  background-color: transparent;
+  border: 2px solid #fc99ffcc;
+  color: #fc99ffcc;
+  border-radius: 30px;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  input[type="text"], select, input[type="button"] {
+    width: 100%;
+    width: 15%;
+    margin: 5px 0;
+    margin-left: 15px;
+  }
+}
+
+#bt3, #startg {
+  height: 40px;
+  width: 180px;
+  background-color: transparent;
+  border: 2px solid #00d1ff;
+  color: #fc99ffcc;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #bt3, #startg {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+/* Additional mobile-specific styles */
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #play2{
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #label1{
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 1em;
+  }
+}
+
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #label2{
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #label3{
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 1em;
+    position: relative;
+    left: -15%;
+  }
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #label4{
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #label5{
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 1em;
+    position: relative;
+    left: -15%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+ #player1-name {
+  width: 50%;
+  text-align: center;
+  margin: 5px 0;
+  font-size: 1em;
+  height: 25px;
+  margin-left: 30px;
+ }
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #player2-name{
+        width: 50%;
+        text-align: center;
+        margin: 5px 0;
+        font-size: 1em;
+        height: 25px;
+        margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #player1-choice{
+    width: 35%;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 1em;
+    position: relative;
+    left: 2.5%;
+  }
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #player2-choice{
+    width: 35%;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 1em;
+    position: relative;
+    left: 2.5%;
+  }
+}
+
+
+
+
+#bt2, #bt1{
+  height: 30px;
+    width: 80px;
+    background-color: transparent;
+    border: 2px solid #00d1ff;
+    color: #fc99ffcc;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-right: 23px;
+}
+@media only screen and (max-width: 600px), (max-height: 700px) {
+#nameomk{
+  position: relative;
+    top: -70px;
+    color: white;
+    font-size: 13px;
+}
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+h1{
+  font-size: 40px;
+  color: #00d1ff;
+  position: relative;
+  bottom: 50px;
+}
+}
+
+
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+#eshrd{
+  position: relative;
+    bottom: 45px;
+}
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #singplay2{
+    position: relative;
+    bottom: 45px;
+  }
+}
+
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #multi-player-options{
+    position: relative;
+    bottom: 20px;
+  }
+}
+
+
+h1{
+  color: #00d1ff;
+  font-size: 45px;
+}
+
+#nameomk{
+  position: relative;
+    bottom: 25px;
+    color: white;
+}
+
+#singplay, h2 {
+  color:#fc99ffcc ;
+  font-size: 30px;
+  font-family: cursive;
+  text-decoration: overline;
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  #singplay{
+    text-decoration: overline;
+    font-size: 25px;
+    font-family:  emoji;
+    color: #fc99ffcc;
+    position: relative;
+    top: -30px;
+  }
+}
+
+@media only screen and (max-width: 600px), (max-height: 700px) {
+  h2 {
+    text-decoration: overline;
+    font-size: 25px;
+    font-family: emoji;
+    color: #fc99ffcc;
+    position: relative;
+    top: 15px;
+  }
+  }
+

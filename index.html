@@ -1,0 +1,100 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="game_music.mp3" type="audio/mp3">
+</audio>
+
+
+
+
+
+    <div class="container">
+        <h1 id="headg">Tic Tac Toe</h1>
+        <p id="nameomk">Developed by OMKESH</p>
+        <div id="single-player-options">
+            <h2 id="singplay">Single Player</h2>
+            <div id="singplay2">
+                <label id="label1" for="player-choice">Choose your symbol:</label>
+                <select id="player-choice">
+                    <option value="X">X</option>
+                    <option value="O">O</option>
+                </select>
+            </div>
+            <div id="eshrd">
+                <button id="bt1" onclick="startGame('easy')">(Easy)</button>
+                <button id="bt2" onclick="startGame('hard')">(Hard)</button>
+            </div>
+        </div>
+        <div id="multi-player-options">
+            <h2>Multiplayer</h2>
+            <div>
+                <label id="label2" for="player1-name">Player 1 Name:</label>
+                <input type="text" id="player1-name" placeholder="Player 1">
+                <label id="label3" for="player1-choice">Symbol:</label>
+                <select id="player1-choice">
+                    <option value="X">X</option>
+                    <option value="O">O</option>
+                </select>
+            </div>
+            <div id="play2">
+                <label id="label4" for="player2-name">Player 2 Name:</label>
+                <input type="text" id="player2-name" placeholder="Player 2">
+                <label id="label5" for="player2-choice">Symbol:</label>
+                <select id="player2-choice">
+                    <option value="O">O</option>
+                    <option value="X">X</option>
+                </select>
+            </div>
+            <button id="bt3" onclick="startGame('multiplayer')">Start Multiplayer Game</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('player1-choice').addEventListener('change', (event) => {
+            const player1Choice = event.target.value;
+            const player2ChoiceSelect = document.getElementById('player2-choice');
+            player2ChoiceSelect.value = player1Choice === 'X' ? 'O' : 'X';
+        });
+
+        document.getElementById('player2-choice').addEventListener('change', (event) => {
+            const player2Choice = event.target.value;
+            const player1ChoiceSelect = document.getElementById('player1-choice');
+            player1ChoiceSelect.value = player2Choice === 'X' ? 'O' : 'X';
+        });
+
+        function startGame(mode) {
+            if (mode === 'multiplayer') {
+                const player1Name = document.getElementById('player1-name').value || 'Player 1';
+                const player2Name = document.getElementById('player2-name').value || 'Player 2';
+                const player1Choice = document.getElementById('player1-choice').value;
+                localStorage.setItem('gameMode', mode);
+                localStorage.setItem('player1Name', player1Name);
+                localStorage.setItem('player2Name', player2Name);
+                localStorage.setItem('player1Choice', player1Choice);
+                localStorage.setItem('player2Choice', player1Choice === 'X' ? 'O' : 'X');
+            } else {
+                const playerChoice = document.getElementById('player-choice').value;
+                localStorage.setItem('gameMode', mode);
+                localStorage.setItem('playerChoice', playerChoice);
+            }
+            window.location.href = 'game.html';
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>
+
+
